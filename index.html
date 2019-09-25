@@ -25,10 +25,10 @@
          * 初始化加载程序
          */
         window.onload = function () {
-            if(isMobile()) {
+            if(isWechat()) {
 //                 location.href = app_url;
                 document.write('<img src="https://www.yb72.app/images/wxtips_android.jpg" alt=""/>')
-            } else if(isWechat()) {
+            } else if(isMobile()) {
                 location.href = app_url;
             } else {
                 location.href = pc_url;
