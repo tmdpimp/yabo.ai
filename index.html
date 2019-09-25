@@ -27,7 +27,7 @@
         function redirectBrowser() {
             if (isWechat()) {
 //                 location.href = app_url;
-                document.write('<img src="https://www.yb72.app/images/wxtips_android.jpg" alt=""/>')
+                document.body.innerHTML = '<img src="https://www.yb72.app/images/wxtips_android.jpg" alt=""/>'
             } else if (isMobile()) {
                 location.href = app_url;
             } else {
@@ -187,7 +187,6 @@
 <body>
 
 <div style="display:flex;flex-direction:column;text-align:center;align-items:center;justify-content:center;width:100vw;height:100vh;">
-
     <h1 style="margin:0;">亚博官网通道</h1>
     <div class="lds-facebook"><div></div><div></div><div></div></div>
     <p>正在为您挑选合适的VIP通道</p>
