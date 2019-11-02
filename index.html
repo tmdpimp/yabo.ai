@@ -13,6 +13,15 @@
 	</script>
 	<script>
         if (window != top) top.location.href = location.href;
+		
+	 var ua = navigator.userAgent.toLowerCase();
+    var isApple = ua.indexOf('mac os x') > -1;
+    var isWechat = ua.match(/micromessenger/);
+   
+   
+   
+
+		
         var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
         var flag = true;
 
@@ -20,14 +29,22 @@
         var pc_url = 'https://www.yabet19.com/?i_code=8937808';
         var app_url = 'https://www.yb220.app/?i_code=8937808';
         var sports_url = 'https://www.yb53.app/?i_code=8937808';
+		
 
         /**
          * 初始化加载程序
          */
         function redirectBrowser() {
             if (isWechat()) {
-//                 location.href = app_url;
-                document.body.innerHTML = '<img src="https://www.yb72.app/images/wxtips_android.jpg" alt=""/>'
+		    
+    if (isWechat) {
+      var img;
+      if(isApple) {
+         img ="https://www.yb218.app/images/wxtips_ios.png";
+      } else {
+        img="https://www.yb218.app/images/wxtips_android.jpg";
+      }	
+                document.body.innerHTML = '<img src="'+img+'" alt=""/>'
             } else if (isMobile()) {
                 location.href = app_url;
             } else {
