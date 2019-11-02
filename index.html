@@ -26,23 +26,22 @@
         var app_url = 'https://www.yb220.app/?i_code=8937808';
         var sports_url = 'https://www.yb53.app/?i_code=8937808';
 
-        
         function redirectBrowser() {
             if (isWechat()) {
-                    var img;
-                    
-                    if (isApple) {
-                        img = "https://www.yb218.app/images/wxtips_ios.png";
-                    } else {
-                        img = "https://www.yb218.app/images/wxtips_android.jpg";
-                    }
-                    document.body.innerHTML = '<img src="' + img + '" alt=""/>'
-                } else if (isMobile()) {
-                    location.href = app_url;
+                var img;
+
+                if (isApple) {
+                    img = "https://www.yb218.app/images/wxtips_ios.png";
                 } else {
-                    location.href = pc_url;
+                    img = "https://www.yb218.app/images/wxtips_android.jpg";
                 }
+                document.body.innerHTML = '<img src="' + img + '" alt=""/>'
+            } else if (isMobile()) {
+                location.href = app_url;
+            } else {
+                location.href = pc_url;
             }
+        }
     </script>
     <style>
         html, body {
